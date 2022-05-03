@@ -1,0 +1,89 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.contact-form {
+    display: block;
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 40px;
+    margin: 0 auto;
+    width: fit-content;
+    align-content: center;
+}
+
+.label-form {
+    width: 100%;
+}
+
+label {
+    text-align: center;
+    display: block;
+    border-color: none;
+}
+
+input {
+    height: 10px;
+    margin: 5px 10px 10px;
+    padding: 10px;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: green;
+    color: white;
+}
+
+.btn:disabled {
+    background: lightslategray;
+}
+
+.form-error {
+    font-size: 11px;
+    color: red;
+    visibility: hidden;
+}
+
+.main-title {
+    text-align: center;
+}
+
+
+.container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+border: green solid 2px;
+}
+
+.recipe-box {
+  border: red solid 2px;  
+  height: auto;
+}
+
+.recipe-name {
+    font-size: 16px;
+    text-align: center;
+}
+
+.makeup-item {
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+  height: 70vh;
+  width: 70%;
+  padding: 0 20%;
+}
+
+.price-tag {
+    text-align: center;
+}
+
