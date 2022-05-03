@@ -20,6 +20,8 @@ async function fetchMakeupDetails() {
         const result = await details.json();
         console.log(result);
 
+        makeupDetails.innerHTML = "";
+
         makeupDetails.innerHTML = `<h2>${result.name}</h2>
         <p>Brand: ${result.brand}</p>
         <p>Product details: ${result.description}</p>
