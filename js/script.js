@@ -22,16 +22,10 @@ async function makeupAPI() {
                 continue;
             }
 
-            if (results[i].image_link === false) {
-                continue;
-            }
-
             container.innerHTML += `<a class="makeup-item" href="details.html?id=${results[i].id}">
-            <div class="product-box">
             <h2 class="product-name"> ${results[i].name}</h2>
             <img src="${results[i].image_link}" alt="${results[i].name}" class="image"></img>
-            <p class="price-tag">Price: ${results[i].price}$</p>
-            </div>
+            <p class="price-tag">Price: $${results[i].price}</p>
             </a>
             `;
         }

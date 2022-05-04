@@ -1,17 +1,22 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+    margin-left: 100px;
 }
 
 /****************NAVBAR****************/
 .header {
   position: fixed;
+  z-index: 100;
   top: 0;
   width: 100%;
   min-height: 60px;
@@ -22,87 +27,82 @@ body {
 }
 
 ul li {
-    display: inline-block;
-    margin-left: 15px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 li a {
-    text-decoration: none;
-    color: #f1f1f1;
+  text-decoration: none;
+  color: #f1f1f1;
 }
-
 
 /****************CONTACT FORM****************/
 .contact-form {
-    display: block;
-    position: relative;
-    background-color: #f1f1f1;
-    padding: 40px;
-    margin: 100px auto;
-    width: fit-content;
-    align-content: center;
+  display: block;
+  position: relative;
+  background-color: #f1f1f1;
+  padding: 40px;
+  margin: 100px auto;
+  width: fit-content;
+  align-content: center;
 }
 
 .label-form {
-    width: 100%;
+  width: 100%;
 }
 
 label {
-    text-align: center;
-    display: block;
-    border-color: none;
+  text-align: center;
+  display: block;
+  border-color: none;
 }
 
 input {
-    height: 10px;
-    margin: 5px 10px 10px;
-    padding: 10px;
+  height: 10px;
+  margin: 5px 10px 10px;
+  padding: 10px;
 }
 
 .btn {
-    width: 100px;
-    height: 30px;
-    margin-left: 30%;
-    margin-top: 10%;
-    background-color: green;
-    color: white;
+  width: 100px;
+  height: 30px;
+  margin-left: 30%;
+  margin-top: 10%;
+  background-color: green;
+  color: white;
 }
 
 .btn:disabled {
-    background: lightslategray;
+  background: lightslategray;
 }
 
 .form-error {
-    font-size: 11px;
-    color: red;
-    visibility: hidden;
+  font-size: 11px;
+  color: red;
+  visibility: hidden;
 }
-
 
 /****************MAIN PAGE************/
 .main-title {
-    text-align: center;
+  text-align: center;
+  margin: 100px 0 50px;
 }
 
 .container {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-border: green solid 2px;
-}
-
-.product-box {
-  border: red solid 2px;  
-  height: auto;
-}
-
-.product-name {
-    font-size: 16px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .makeup-item {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 0 1px black;
+  padding: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  text-align: center;
 }
 
 .image {
@@ -112,32 +112,28 @@ border: green solid 2px;
 }
 
 .price-tag {
-    text-align: center;
+  text-align: center;
 }
 
+/****************DETAILS PAGE************/
+.makeup-details {
+  margin: 50px 100px;
+  display: flex;
+}
 
- /****************DETAILS PAGE************/
- 
- 
+.detail-description {
+  flex: 1;
+  padding-right: 50px;
+}
 
- .makeup-details {
-     margin: 100px 100px;
-     display: flex; 
- }
-
- .detail-description {
-     flex:1;
-     padding-right: 20px;
- }
-
- .detail-description a {
-     color: black;
- }
+.detail-description a {
+  color: black;
+}
 
 .detail-img {
-    max-height: 100vh;
-    max-width: 100vh;
-    flex:1;
-    padding-left: 20px;
-    padding-top: 30px;
+  max-height: 100vh;
+  max-width: 100vh;
+  flex: 1;
+  padding-left: 20px;
+  padding-top: 30px;
 }
