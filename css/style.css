@@ -41,32 +41,48 @@ li a {
   display: block;
   position: relative;
   background-color: #f1f1f1;
-  padding: 40px;
+  padding: 20px 30px;
   margin: 100px auto;
-  width: fit-content;
+  width: 500px;
   align-content: center;
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin: 20px;
 }
 
 .label-form {
   width: 100%;
 }
 
-label {
-  text-align: center;
-  display: block;
-  border-color: none;
+.names-form{
+    display: flex;
 }
 
-input {
-  height: 10px;
-  margin: 5px 10px 10px;
+.label-form1 {
+    flex: 1;
+    width: 100%;
+    padding-right: 30px;
+}
+
+label {
+  text-align: left;
+  display: block;
+  padding-top: 10px;
+}
+
+input,
+textarea {
+  margin: 15px 10px 0;
   padding: 10px;
+  width: 90%;
 }
 
 .btn {
   width: 100px;
   height: 30px;
-  margin-left: 30%;
+  margin-left: 40%;
   margin-top: 10%;
   background-color: green;
   color: white;
@@ -76,10 +92,17 @@ input {
   background: lightslategray;
 }
 
+label {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
 .form-error {
-  font-size: 11px;
+  margin-top: 2px;
+  font-size: 10px;
+  margin-left: 10px;
   color: red;
-  visibility: hidden;
+  display: none;
 }
 
 /****************MAIN PAGE************/

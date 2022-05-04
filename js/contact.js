@@ -1,25 +1,95 @@
 const form = document.querySelector(".contact-form");
+const firstName = document.querySelector("#name");
+const nameError = document.querySelector("#nameError");
+const nameErrSec = document.querySelector("#nameError2");
+
+const lastName = document.querySelector("#lastname");
+const lastNameError = document.querySelector("#lastNameError");
+const lastNameErrSec = document.querySelector("#lastNameError2");
+
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
-const password = document.querySelector("#password");
-const passError = document.querySelector("#passwordError");
+const address = document.querySelector("#address");
+const addressError = document.querySelector("#addressError");
 const button = document.querySelector(".btn");
 
 
 function validateForm() {
     event.preventDefault();
 
-    if (validateEmail(email.value) && (validatePassword(password.value) === true))  {
-        emailError.style.visibility = "hidden";
-        passError.style.visibility = "hidden";
+    /*Checks if the first name field is filled out*/
+    if (!firstName.value) {
+        nameError.style.display = "block"
+        firstName.style.borderColor = "red"
     } else {
-        emailError.style.visibility = "visible";
-        passError.style.visibility = "visible";
+        nameError.style.display = "none"
     }
+
+    /*Checks if the first name contains at least 2 characters*/
+    if (checkLength(firstName.value, 1) === true) {
+        nameErrSec.style.display = "none"
+    } else {
+        nameErrSec.style.display = "block"
+    }
+
+    /*Checks if the last name field is filled out*/
+    if (!lastName.value) {
+        lastNameError.style.display = "block"
+        lastName.style.borderColor = "red"
+    } else {
+        lastNameError.style.display = "none"
+    }
+
+    /*Checks if the last name contains at least 2 characters*/
+    if (checkLength(lastName.value, 1) === true) {
+        lastNameErrSec.style.display = "none"
+    } else {
+        lastNameErrSec.style.display = "block"
+    }
+
+    /*Checks if the subject field has at least 10 characters*/
+    if (checkLength(subject.value, 10) === true) {
+        subjectError.style.display = "none"
+    } else {
+        subjectError.style.display = "block"
+    }
+
+    /*Checks if the email address is correct*/
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "block";
+    }
+
+    /*Checks if the address field has at least 25 characters*/
+    if (addressLength(address.value, 25) === true) {
+        addressError.style.display = "none"
+    } else {
+        addressError.style.display = "block"
+    }
+
 }
+
 
 form.addEventListener("submit", validateForm);
 
+function checkLength(value, len) {
+    if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function addressLength(value, length) {
+    if (value.length > length) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function validateEmail(email) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
@@ -27,8 +97,5 @@ function validateEmail(email) {
     return patternMatches;
 }
 
-function validatePassword(password) {
-    const regPass = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
-    const passwordMatch = regPass.test(password);
-    return passwordMatch;
-}
+
+
