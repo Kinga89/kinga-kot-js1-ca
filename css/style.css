@@ -10,7 +10,15 @@ body {
 }
 
 .loader {
-    margin-left: 100px;
+    margin-left: 150px;
+}
+
+#error_msg {
+    margin: 10px 100px;
+    border: solid red 3px;
+    background-color: rgb(252, 207, 207);
+    padding: 20px;
+    width: 100%;
 }
 
 /****************NAVBAR****************/
@@ -47,7 +55,7 @@ li a {
   align-content: center;
 }
 
-.contact-form h3 {
+.contact-form h2 {
     text-align: center;
     margin: 20px;
 }
@@ -159,4 +167,8 @@ label {
   flex: 1;
   padding-left: 20px;
   padding-top: 30px;
+}
+
+i {
+   margin-left: 5px;
 }

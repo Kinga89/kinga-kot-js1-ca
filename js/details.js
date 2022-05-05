@@ -26,10 +26,10 @@ async function fetchMakeupDetails() {
     makeupDetails.innerHTML = "";
 
     makeupDetails.innerHTML = `<div class="detail-description">
-        <h3>${result.name}</h3>
+        <h2>${result.name}</h2>
         <p class="brand-name">Brand: ${result.brand}</p>
         <p class="currency">Price: $${result.price} ${result.currency}</p>
-        <a href="${result.product_link}"><p>Link to the product</p> </a>
+        <a href="${result.product_link}"><p>Link to the product <i class="fas fa-angle-double-right"></i></p> </a>
         <p>Product details: ${result.description}</p></div>
         <img src="${result.image_link}" alt="${result.name}" class="detail-img"></img>
         `;

@@ -1,7 +1,7 @@
 const url = "http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=vegan";
 
 const container = document.querySelector(".container");
-const errorMsg = document.querySelector(".error-msg");
+
 
 async function makeupAPI() {
     try {

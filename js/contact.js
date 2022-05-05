@@ -15,7 +15,6 @@ const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
 const button = document.querySelector(".btn");
 
-
 function validateForm() {
     event.preventDefault();
 
@@ -25,6 +24,7 @@ function validateForm() {
         firstName.style.borderColor = "red"
     } else {
         nameError.style.display = "none"
+        firstName.style.borderColor = "#4cd038"
     }
 
     /*Checks if the first name contains at least 2 characters*/
@@ -32,6 +32,7 @@ function validateForm() {
         nameErrSec.style.display = "none"
     } else {
         nameErrSec.style.display = "block"
+        firstName.style.borderColor = "red"
     }
 
     /*Checks if the last name field is filled out*/
@@ -40,20 +41,25 @@ function validateForm() {
         lastName.style.borderColor = "red"
     } else {
         lastNameError.style.display = "none"
+        lastName.style.borderColor = "#4cd038"
     }
 
     /*Checks if the last name contains at least 2 characters*/
     if (checkLength(lastName.value, 1) === true) {
         lastNameErrSec.style.display = "none"
+        lastName.style.borderColor = "#4cd038"
     } else {
         lastNameErrSec.style.display = "block"
+        lastName.style.borderColor = "red"
     }
 
     /*Checks if the subject field has at least 10 characters*/
     if (checkLength(subject.value, 10) === true) {
         subjectError.style.display = "none"
+        subject.style.borderColor = "#4cd038"
     } else {
         subjectError.style.display = "block"
+        subject.style.borderColor = "red"
     }
 
     /*Checks if the email address is correct*/
@@ -61,30 +67,23 @@ function validateForm() {
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
+        email.style.borderColor = "red"
     }
 
     /*Checks if the address field has at least 25 characters*/
     if (addressLength(address.value, 25) === true) {
         addressError.style.display = "none"
+        address.style.borderColor = "#4cd038"
     } else {
         addressError.style.display = "block"
+        address.style.borderColor = "red"
     }
-
 }
-
 
 form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) {
     if (value.trim().length > len) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function addressLength(value, length) {
-    if (value.length > length) {
         return true;
     } else {
         return false;
@@ -97,5 +96,10 @@ function validateEmail(email) {
     return patternMatches;
 }
 
-
-
+function addressLength(value, length) {
+    if (value.length > length) {
+        return true;
+    } else {
+        return false;
+    }
+}
