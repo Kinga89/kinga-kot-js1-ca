@@ -88,13 +88,20 @@ function validateForm() {
   console.log(lastName.value)
   console.log(subject.value)
   console.log(email.value)
-  console.log(address.value)
+    console.log(address.value)
+    
+ let validForm = firstName.value && lastName.value && subject.value && email.value && address.value
+
+    
+  if (validForm === true) {
+    validationPassed.style.display = "block"
+} else {
+    validationPassed.style.display = "none"
+}   
     
 }
 
 form.addEventListener("submit", validateForm);
-
-
 
 
 function checkLength(value, len) {
@@ -118,3 +125,4 @@ function addressLength(value, length) {
     return false;
   }
 }
+
