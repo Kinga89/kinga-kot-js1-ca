@@ -1,5 +1,5 @@
 const makeupDetails = document.querySelector(".makeup-details");
-const headTitle = document.querySelector("title")
+const headTitle = document.querySelector("title");
 
 const queryString = document.location.search;
 
@@ -35,8 +35,8 @@ async function fetchMakeupDetails() {
         <img src="${result.image_link}" alt="${result.name}" class="detail-img"></img>
         `;
 
-    headTitle.innerHTML += `${result.name}`
-    
+    headTitle.innerHTML += `${result.name}`;
+
     const brandName = document.querySelector(".brand-name");
     const currency = document.querySelector(".currency");
 
