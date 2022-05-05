@@ -113,6 +113,12 @@ label {
   display: none;
 }
 
+.validation-passed {
+  text-align: center;
+  color: green;
+  display: none;
+}
+
 /****************MAIN PAGE************/
 .main-title {
   text-align: center;
@@ -148,7 +154,7 @@ label {
 
 /****************DETAILS PAGE************/
 .makeup-details {
-  margin: 50px 100px;
+  margin: 70px 100px;
   display: flex;
 }
 
@@ -162,8 +168,8 @@ label {
 }
 
 .detail-img {
-  max-height: 100vh;
-  max-width: 100vh;
+  height: 60vh;
+  max-width: 60vh;
   flex: 1;
   padding-left: 20px;
   padding-top: 30px;
