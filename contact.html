@@ -11,65 +11,67 @@
 
 <body>
   <main>
-  <div class="header">
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-  </div>
-  <form class="contact-form">
-    <h2>Contact form</h2> 
-    <div class="validation-passed">Thank you for your submission<i class="fas fa-check"></i></div>
-    <div class="bothnames-form">
-      <div class="nameform">
-        <label>First name*
-        <input name="name" id="name"/>
-        </label>
-        <div class="form-error" id="nameError">*This field is required</div>
-        <div class="form-error" id="nameError2">
-          *Name must have at least 2 characters
-        </div>
+    <div class="header">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <form class="contact-form">
+      <h2>Contact form</h2>
+      <div class="validation-passed">
+        Thank you for your submission<i class="fas fa-check"></i>
       </div>
+      <div class="bothnames-form">
+        <div class="nameform">
+          <label>First name*
+            <input name="name" id="name" />
+          </label>
+          <div class="form-error" id="nameError">*This field is required</div>
+          <div class="form-error" id="nameError2">
+            *Name must have at least 2 characters
+          </div>
+        </div>
 
-      <div class="nameform">
-        <label>Last name*
-        <input name="lastname" id="lastname"/>
+        <div class="nameform">
+          <label>Last name*
+            <input name="lastname" id="lastname" />
+          </label>
+          <div class="form-error" id="lastNameError">
+            *This field is required
+          </div>
+          <div class="form-error" id="lastNameError2">
+            *Last name must have at least 2 characters
+          </div>
+        </div>
+      </div>
+      <div class="section-form">
+        <label>Subject
+          <input name="subject" id="subject" />
         </label>
-        <div class="form-error" id="lastNameError">
-          *This field is required
-        </div>
-        <div class="form-error" id="lastNameError2">
-          *Last name must have at least 2 characters
+        <div class="form-error" id="subjectError">
+          Subject must have at least 10 characters
         </div>
       </div>
-    </div>
-    <div class="section-form">
-      <label>Subject
-         <input name="subject" id="subject" />
-      </label>
-      <div class="form-error" id="subjectError">
-        Subject must have at least 10 characters
+      <div class="section-form">
+        <label>Email
+          <input name="email" id="email" />
+        </label>
+        <div class="form-error" id="emailError">Invalid email address</div>
       </div>
-    </div>
-    <div class="section-form">
-      <label>Email
-         <input name="email" id="email" />
-      </label>
-      <div class="form-error" id="emailError">Invalid email address</div>
-    </div>
-    <div class="section-form">
-      <label>Address
-        <textarea name="address" id="address"></textarea>
-      </label>
-      <div class="form-error" id="addressError">
-        Address must have at least 25 characters
+      <div class="section-form">
+        <label>Address
+          <textarea name="address" id="address"></textarea>
+        </label>
+        <div class="form-error" id="addressError">
+          Address must have at least 25 characters
+        </div>
       </div>
-    </div>
-    <button class="btn">Submit</button>
-  </form>
-</main>
+      <button class="btn">Submit</button>
+    </form>
+  </main>
   <script src="js/contact.js"></script>
 </body>
 

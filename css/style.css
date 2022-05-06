@@ -10,15 +10,15 @@ body {
 }
 
 .loader {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 #error_msg {
-    margin: 10px 100px;
-    border: solid red 3px;
-    background-color: rgb(252, 207, 207);
-    padding: 20px;
-    width: 100%;
+  margin: 10px 100px;
+  border: solid red 3px;
+  background-color: rgb(252, 207, 207);
+  padding: 20px;
+  width: 100%;
 }
 
 /****************NAVBAR****************/
@@ -56,22 +56,22 @@ li a {
 }
 
 .contact-form h2 {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 
 .section-form {
   width: 100%;
 }
 
-.bothnames-form{
-    display: flex;
+.bothnames-form {
+  display: flex;
 }
 
 .nameform {
-    flex: 1;
-    width: 100%;
-    padding-right: 30px;
+  flex: 1;
+  width: 100%;
+  padding-right: 30px;
 }
 
 label {
@@ -168,5 +168,5 @@ textarea {
 }
 
 i {
-   margin-left: 5px;
+  margin-left: 5px;
 }
