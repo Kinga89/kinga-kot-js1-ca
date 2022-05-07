@@ -12,9 +12,6 @@ async function makeupAPI() {
     container.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      if (i === 30) {
-        break;
-      }
 
       console.log(results[i]);
 
